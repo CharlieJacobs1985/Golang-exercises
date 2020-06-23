@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	jbmp := [][]string{{"James", "Bond", "Shaken, not stirred"}, {"Miss", "Moneypenny", "Hellooooo James"}}
+	for i, v := range jbmp {
+		fmt.Println(v)
+		for j, _ := range jbmp[i] {
+			fmt.Printf("\t")
+			fmt.Println("Index position: ", i, j, jbmp[i][j])
+		}
+	}
+}

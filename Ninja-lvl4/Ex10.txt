@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+	jb := map[string][]string{"James_Bond": {"Shaken, not stirred", "Martinis", "Women"},
+		"Moneypenny_Miss": {"James Bond", "Literature", "Computer science"},
+		"No_Dr":           {"Being evil", "Icecream", "Sunsets"},
+	}
+	jb["Austin_Powers"] = []string{"Yeah baby, yeah", "Do I?", "Women"}
+	delete(jb, "Austin_Powers")
+
+	for k, v := range jb {
+		fmt.Println("This is the record for: ", k)
+		for j, v2 := range v {
+			fmt.Printf("\t Index: %v \t value: %v \n", j, v2)
+		}
+	}
+}

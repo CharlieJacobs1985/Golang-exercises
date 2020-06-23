@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	x := [5]int{13, 15, 19, 24, 185}
+
+	for i, v := range x {
+		fmt.Printf("%v\t%v\t%T\n", i, v, v)
+	}
+
+}
